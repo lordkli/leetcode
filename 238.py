@@ -72,3 +72,37 @@ def perfect_productExceptSelf(nums: list[int]) -> list[int]:
 
 print(perfect_productExceptSelf([1,2,3,4]))
 print(perfect_productExceptSelf([-1,1,0,-3,3]))
+
+
+
+def zero_or_sub(prod, val):
+    if val != 0:
+        return 0
+    return prod
+
+def productExceptSelf(nums: list[int]) -> list[int]:
+    prod = 1
+    prod_without_zeros = 1
+    has_multiple_zeros = False
+    has_one_zero = False
+
+    for i in nums:
+        if i == 0 and has_one_zero:
+            has_multiple_zeros = True
+        elif i == 0:
+            has_one_zero = True
+        else:
+            prod_without_zeros *= i
+
+        prod *= i
+
+    if has_multiple_zeros:
+        return [0 for i in nums]
+
+    if has_one_zero:
+        return [zero_or_sub(prod_without_zeros, i) for i in nums]
+    
+    return [int(prod / i) for i in nums]
+
+print(productExceptSelf([1,2,3,4]))
+print(productExceptSelf([-1,1,0,-3,3]))
