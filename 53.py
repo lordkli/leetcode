@@ -10,3 +10,17 @@ def maxSubArray(nums: list[int]) -> int:
     return maxSub
 
 print(maxSubArray([-2,1,-3,4,-1,2,1,-5,4]))
+
+
+
+def maxSubArray2(nums: list[int]) -> int:
+
+    s=0
+    m=nums[0]
+    for i in nums:
+        s+=i
+        if s>m:m=s
+        if s<0: s=0
+    return m
+
+print(maxSubArray2([-2,1,-3,4,-1,2,1,-5,4]))
