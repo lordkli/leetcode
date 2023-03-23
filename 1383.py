@@ -6,11 +6,11 @@ k = 86484
 def solution(n,speed,efficiency,k):
     sumList = []
     liste = list(zip(speed, efficiency))
-    # liste.sort(reverse=True, key=lambda student: student[1])
-    candidates = sorted(candidates, key=lambda x: x[0], reverse=True)
+    liste.sort(reverse=True, key=lambda student: student[1])
+    # candidates = sorted(candidates, key=lambda x: x[0], reverse=True)
     max = 0
     for i in range(n):
-        if(len(sumList)<k): 
+        if(len(sumList)<k):
             sumList.append(liste[i][0])
         else:
             min = 0
