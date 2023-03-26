@@ -66,6 +66,16 @@ def parcaSonuc(list, speed, efficiency):
     
     return summation * min([efficiency[i] for i in range(len(efficiency)) if i not in list])
 
+import time
+
+def tester():
+    liste = list(zip(speed, efficiency))
+    start_time = time.time()
+    liste.sort(reverse=True, key=lambda student: student[1])
+    
+    
+        
 # print(solution(n,speed,efficiency,k))
+
 print(qsort([9,4,5,2,3,5,5,1,2,7]))
 # print(parcaSonuc([0,2,3,5], speed, efficiency))
