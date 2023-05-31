@@ -28,3 +28,6 @@ def tekrarli_mi2(liste):
 
 print(tekrarli_mi2([1,2,3,1]))
 print(tekrarli_mi2([1,2,3,4]))
+
+def containsDuplicate(nums: list[int]) -> bool:
+    return len(set(nums)) != len(nums)

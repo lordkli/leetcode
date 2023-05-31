@@ -1,5 +1,3 @@
-
-
 def solution(sayi:int)-> list[list[int]]:
     deger = 10
     temp = deger
