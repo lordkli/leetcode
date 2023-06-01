@@ -35,3 +35,37 @@ def insertion_sort(array):
     return array
 
 print(insertion_sort([5,1,3,2,4]))
+
+
+def merge(array1, array2):
+    firstPointer = 0
+    secondPointer = 0
+    mergedList = []
+    
+    while firstPointer < len(array1) and secondPointer < len(array2):
+        if array1[firstPointer] < array2[secondPointer]:
+            mergedList.append(array1[firstPointer])
+            firstPointer += 1
+        else:
+            mergedList.append(array2[secondPointer])
+            secondPointer += 1
+    
+    while firstPointer < len(array1):
+        mergedList.append(array1[firstPointer])
+        firstPointer += 1
+    
+    while secondPointer < len(array2):
+        mergedList.append(array2[secondPointer])
+        secondPointer += 1
+    
+    return mergedList
+
+def mergeSort(array):
+    if len(array) <= 1:
+        return array
+    mid = len(array)//2
+    leftPart = mergeSort(array[:mid])
+    rightPart = mergeSort(array[mid:])
+    return merge(leftPart, rightPart)
+
+print(mergeSort([5,1,3,2,4]))
