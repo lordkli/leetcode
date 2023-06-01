@@ -22,7 +22,7 @@ def leastBricks(wall: list[list[int]]) -> int:
 print(leastBricks([[1,2,2,1],[3,1,2],[1,3,2],[2,4],[3,1,2],[1,3,1,1]]))
 
 
-def leastBricks(self, wall: List[List[int]]) -> int:
+def leastBricks(self, wall: list[list[int]]) -> int:
         countGap = {0 : 0}
 
         for r in wall:
