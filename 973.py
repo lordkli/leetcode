@@ -35,19 +35,6 @@ k = 1
 print(kClosest(points, k))
 
 
-def kClosest(points: list[list[int]], k: int) -> list[list[int]]:
-    for i, point in enumerate(points):
-                point.insert(0, point[0] ** 2 + point[1] ** 2)
-            
-            heapify(points)
-            lowest_k = []        
-            for i in range(k):
-                dist_squared, x, y = heappop(points)
-                lowest_k.append([x, y])
-
-            return lowest_k 
-
-
 class Solution:
     def kClosest(self, points: list[list[int]], k: int) -> list[list[int]]:
 
