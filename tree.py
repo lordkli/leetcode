@@ -4,7 +4,7 @@ class Node:
         self.left = None
         self.right = None
 
-class BinarSearchTree:
+class BinarySearchTree:
     def __init__(self):
         self.root = None
     
@@ -49,3 +49,25 @@ class BinarSearchTree:
         while currentNode.right:
             currentNode = currentNode.right
         return currentNode
+
+
+myTree = BinarySearchTree()
+print(myTree.insert(10))
+print(myTree.insert(10))
+print(myTree.insert(8))
+print(myTree.insert(20))
+print(myTree.insert(25))
+print(myTree.insert(16))
+
+print(myTree.contains(10))
+print(myTree.contains(16))
+print(myTree.contains(19))
+
+print(myTree.root.value)
+print(myTree.root.right.value)
+print(myTree.root.right.right.value)
+print(myTree.root.left.value)
+
+print(myTree.minOfNode(myTree.root).value)
+print(myTree.maxOfNode(myTree.root).value)
+
