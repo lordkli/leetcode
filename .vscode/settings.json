@@ -1,9 +1,13 @@
 {
-    "python.autoComplete.extraPaths": [
-        "c:\\Users\\erenn\\.vscode\\extensions\\stefanwehr.write-your-python-program-1.0.5\\python\\src\\"
-    ],
-    "python.linting.enabled": false,
-    "python.analysis.extraPaths": [
-        "c:\\Users\\erenn\\.vscode\\extensions\\stefanwehr.write-your-python-program-1.0.4\\python\\src\\"
-    ]
+  "python.autoComplete.extraPaths": [
+    "c:\\Users\\User\\.vscode\\extensions\\stefanwehr.write-your-python-program-1.0.6\\python\\src\\"
+  ],
+  "python.linting.enabled": false,
+  "python.analysis.extraPaths": [
+    "c:\\Users\\erenn\\.vscode\\extensions\\stefanwehr.write-your-python-program-1.0.4\\python\\src\\"
+  ],
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "python.formatting.provider": "none"
 }
