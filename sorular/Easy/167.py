@@ -40,22 +40,43 @@ from typing import List
 
 # print(twoSum(numbers, target))
 
+
 # ! HATA AYNI KEYDE OLAN ELEMANLAR OLDUGU ICIN PROBLEM YASANIYOR
 def twoSum(numbers: List[int], target: int) -> List[int]:
-        l, r = 0 , len(numbers) -1
-        
-        while l < r:
-            if numbers[l] + numbers[r] == target:
-                return [l + 1, r + 1]
-            elif numbers[l] + numbers[r] < target:
-                l += 1
-            else:
-                r -= 1
-        return []
+    l, r = 0, len(numbers) - 1
+
+    while l < r:
+        if numbers[l] + numbers[r] == target:
+            return [l + 1, r + 1]
+        elif numbers[l] + numbers[r] < target:
+            l += 1
+        else:
+            r -= 1
+    return []
 
 
 numbers = [0, 0, 3, 4]
 target = 0
 # numbers = [2, 7, 11, 15]
 # target = 9
-print(twoSum(numbers, target))
+# print(twoSum(numbers, target))
+
+
+#! tekrar cözüm
+
+
+def twoSum2(numbers: List[int], target: int) -> List[int]:
+    l, r = 0, len(numbers) - 1
+    while l < r:
+        if numbers[l] + numbers[r] == target:
+            return [l + 1, r + 1]
+        elif numbers[l] + numbers[r] < target:
+            l += 1
+        else:
+            r -= 1
+    return 0
+
+
+numbers = [-1, 0]
+target = -1
+print(twoSum2(numbers, target))
