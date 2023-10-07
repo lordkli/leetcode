@@ -88,31 +88,32 @@ print(merge(nums1, m, nums2, n))
 
 #! SOLUTION 2
 def merge(self, nums1, m, nums2, n):
-        # Initialize nums1's index
-        i = m - 1
-        # Initialize nums2's index
-        j = n - 1
-        # Initialize a variable k to store the last index of the 1st array...
-        k = m + n - 1
-        while j >= 0:
-            if i >= 0 and nums1[i] > nums2[j]:
-                nums1[k] = nums1[i]
-                k -= 1
-                i -= 1
-            else:
-                nums1[k] = nums2[j]
-                k -= 1
-                j -= 1
+    # Initialize nums1's index
+    i = m - 1
+    # Initialize nums2's index
+    j = n - 1
+    # Initialize a variable k to store the last index of the 1st array...
+    k = m + n - 1
+    while j >= 0:
+        if i >= 0 and nums1[i] > nums2[j]:
+            nums1[k] = nums1[i]
+            k -= 1
+            i -= 1
+        else:
+            nums1[k] = nums2[j]
+            k -= 1
+            j -= 1
 
-#! SOLUTION 3 
+
+#! SOLUTION 3
 def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
-        """
-        Do not return anything, modify nums1 in-place instead.
-        """
-        l = len(nums1)
-        for i in range(l-m):
-            nums1.pop()
-        
-        for i in range(n):
-            nums1.append(nums2[i])
-        return nums1.sort()
+    """
+    Do not return anything, modify nums1 in-place instead.
+    """
+    l = len(nums1)
+    for i in range(l - m):
+        nums1.pop()
+
+    for i in range(n):
+        nums1.append(nums2[i])
+    return nums1.sort()
