@@ -10,8 +10,3 @@ solange (i < n)  {
         ergebnis[mein_i] := s;
     }
 }
-
-adsadasdsad
-asdasdsadsad
-ads
-c
